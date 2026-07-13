@@ -5,6 +5,7 @@
 [![OpenSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/maco-studios/gubee-php-sdk?label=scorecard&color=6F2DBD)](https://scorecard.dev/viewer/?uri=github.com/maco-studios/gubee-php-sdk)
 [![Contributors](https://img.shields.io/github/contributors/maco-studios/gubee-php-sdk?color=6F2DBD)](https://github.com/maco-studios/gubee-php-sdk/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/maco-studios/gubee-php-sdk?color=6F2DBD)](https://github.com/maco-studios/gubee-php-sdk/issues)
+[![Coverage](./.github/assets/coverage.svg)](#executando-os-testes)
 [![Changelog](https://img.shields.io/badge/changelog-gitmoji-6F2DBD)](./CHANGELOG.md)
 
 [English](./README.md) | Português (Brasil)
@@ -166,25 +167,35 @@ Leia [CONTRIBUTING.md](./CONTRIBUTING.md) antes de abrir issue ou pull request.
 
 ## FAQ
 
-### Qual versão do PHP é suportada?
+<details>
+  <summary>Qual versão do PHP é suportada?</summary>
 
 Este SDK suporta PHP `^8.0`, seguindo o requisito declarado no `composer.json`.
+</details>
 
-### O SDK inclui um container de DI para uso da aplicação?
+<details>
+  <summary>O SDK inclui um container de DI para uso da aplicação?</summary>
 
 Não é necessário um container dedicado da aplicação para uso normal. O SDK inicializa internamente seu service provider, e o ponto de entrada comum é instanciar `Gubee\SDK\Client` diretamente.
+</details>
 
-### Como autentico as requisições?
+<details>
+  <summary>Como autentico as requisições?</summary>
 
 Instancie `Client` e chame `authenticate('your-token')` antes de usar um resource.
+</details>
 
-### Como acesso resources que não têm método de atalho em `Client`?
+<details>
+  <summary>Como acesso resources que não têm método de atalho em `Client`?</summary>
 
 Instancie o resource diretamente com a instância de `Client`, por exemplo `new ProductResource($client)` ou `new PlatformResource($client)`.
+</details>
 
-### Existem testes para os contratos do SDK?
+<details>
+  <summary>Existem testes para os contratos do SDK?</summary>
 
 Sim. O repositório inclui testes unitários e testes de contrato de integração validados contra o fixture OpenAPI em `test/Integration/Contract/openapi-integration.json`.
+</details>
 
 ## Licença
 

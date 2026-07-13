@@ -80,6 +80,7 @@
         ],
         "test:integration": "phpunit --testsuite=Integration",
         "test:unit": "phpunit --testsuite=Unit",
-        "test:coverage": "phpunit --coverage-html=var/test/coverage"
+        "test:coverage": "XDEBUG_MODE=coverage phpunit --coverage-html=var/test/coverage",
+        "test:coverage-badge": "XDEBUG_MODE=coverage phpunit --coverage-clover=var/test/coverage.xml && php .github/scripts/coverage-badge.php"
     }
 }

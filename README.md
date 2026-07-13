@@ -5,6 +5,7 @@
 [![OpenSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/maco-studios/gubee-php-sdk?label=scorecard&color=6F2DBD)](https://scorecard.dev/viewer/?uri=github.com/maco-studios/gubee-php-sdk)
 [![Contributors](https://img.shields.io/github/contributors/maco-studios/gubee-php-sdk?color=6F2DBD)](https://github.com/maco-studios/gubee-php-sdk/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/maco-studios/gubee-php-sdk?color=6F2DBD)](https://github.com/maco-studios/gubee-php-sdk/issues)
+[![Coverage](./.github/assets/coverage.svg)](#running-tests)
 [![Changelog](https://img.shields.io/badge/changelog-gitmoji-6F2DBD)](./CHANGELOG.md)
 
 # Gubee PHP SDK
@@ -166,25 +167,35 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening issues or pull requests
 
 ## FAQ
 
-### Which PHP version is supported?
+<details>
+  <summary>Which PHP version is supported?</summary>
 
 This SDK targets PHP `^8.0`, matching the requirement declared in `composer.json`.
+</details>
 
-### Does the SDK include a built-in DI container?
+<details>
+  <summary>Does the SDK include a built-in DI container?</summary>
 
 No dedicated application container is required for normal use. The SDK bootstraps its internal service provider, and the common entrypoint is instantiating `Gubee\SDK\Client` directly.
+</details>
 
-### How do I authenticate requests?
+<details>
+  <summary>How do I authenticate requests?</summary>
 
 Instantiate `Client` and call `authenticate('your-token')` before using a resource.
+</details>
 
-### How do I access resources not exposed as shortcut methods on `Client`?
+<details>
+  <summary>How do I access resources not exposed as shortcut methods on `Client`?</summary>
 
 Instantiate the resource directly with the client instance, for example `new ProductResource($client)` or `new PlatformResource($client)`.
+</details>
 
-### Are there tests for the SDK contracts?
+<details>
+  <summary>Are there tests for the SDK contracts?</summary>
 
 Yes. The repository includes unit tests and integration contract tests validated against the OpenAPI fixture in `test/Integration/Contract/openapi-integration.json`.
+</details>
 
 ## License
 
